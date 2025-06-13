@@ -176,40 +176,43 @@
 
     <!-- Scripts -->
     <script>
-      let attempt = 0;
+  let attempt = 0;
 
-      function closeModal() {
-        document.getElementById("inviteModal").classList.add("hidden");
-      }
+  function closeModal() {
+    document.getElementById("inviteModal").classList.add("hidden");
+  }
+  
+  function showLogin() {
+    document.getElementById("loginWall").classList.remove("hidden");
+  }
+  
+  // Real-time countdown
+  let countdownTime = 7 * 24 * 60 * 60; // 1 week in seconds
+  const clock = document.getElementById("realTimeClock");
+  
+  function updateCountdown() {
+    let days = Math.floor(countdownTime / (24 * 60 * 60));
+    let hours = Math.floor((countdownTime % (24 * 60 * 60)) / 3600);
+    let minutes = Math.floor((countdownTime % 3600) / 60);
+    let seconds = countdownTime % 60;
+  
+    clock.textContent =
+      `${days}d ` +
+      `${hours.toString().padStart(2, "0")}:` +
+      `${minutes.toString().padStart(2, "0")}:` +
+      `${seconds.toString().padStart(2, "0")}`;
+  
+    if (countdownTime > 0) {
+      countdownTime--;
+    } else {
+      clearInterval(timerInterval);
+      alert("Event hasn't started yet!");
+    }
+  }
+  
+  updateCountdown();
+  const timerInterval = setInterval(updateCountdown, 1000);
 
-      function showLogin() {
-        document.getElementById("loginWall").classList.remove("hidden");
-      }
-
-      // Real-time countdown
-      let countdownTime = 10 * 60 * 60; // 1.5 hours
-      const clock = document.getElementById("realTimeClock");
-
-      function updateCountdown() {
-        let hours = Math.floor(countdownTime / 3600);
-        let minutes = Math.floor((countdownTime % 3600) / 60);
-        let seconds = countdownTime % 60;
-
-        clock.textContent =
-          `${hours.toString().padStart(2, "0")}:` +
-          `${minutes.toString().padStart(2, "0")}:` +
-          `${seconds.toString().padStart(2, "0")}`;
-
-        if (countdownTime > 0) {
-          countdownTime--;
-        } else {
-          clearInterval(timerInterval);
-          alert("Event haven't started yet!");
-        }
-      }
-
-      updateCountdown();
-      const timerInterval = setInterval(updateCountdown, 1000);
 
       // Login handling
       document
